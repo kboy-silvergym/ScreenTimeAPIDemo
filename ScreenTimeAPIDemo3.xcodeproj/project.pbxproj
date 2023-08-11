@@ -11,6 +11,7 @@
 		284E22192A85DD6500005C08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22182A85DD6500005C08 /* ContentView.swift */; };
 		284E221B2A85DD6700005C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221A2A85DD6700005C08 /* Assets.xcassets */; };
 		284E221E2A85DD6700005C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221D2A85DD6700005C08 /* Preview Assets.xcassets */; };
+		284E22252A85DD7A00005C08 /* FamilyControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22242A85DD7A00005C08 /* FamilyControlModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		284E22182A85DD6500005C08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		284E221A2A85DD6700005C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284E221D2A85DD6700005C08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		284E22242A85DD7A00005C08 /* FamilyControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyControlModel.swift; sourceTree = "<group>"; };
+		284E22262A85EA5A00005C08 /* ScreenTimeAPIDemo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeAPIDemo3.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,10 @@
 		284E22152A85DD6500005C08 /* ScreenTimeAPIDemo3 */ = {
 			isa = PBXGroup;
 			children = (
+				284E22262A85EA5A00005C08 /* ScreenTimeAPIDemo3.entitlements */,
 				284E22162A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift */,
 				284E22182A85DD6500005C08 /* ContentView.swift */,
+				284E22242A85DD7A00005C08 /* FamilyControlModel.swift */,
 				284E221A2A85DD6700005C08 /* Assets.xcassets */,
 				284E221C2A85DD6700005C08 /* Preview Content */,
 			);
@@ -138,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				284E22192A85DD6500005C08 /* ContentView.swift in Sources */,
+				284E22252A85DD7A00005C08 /* FamilyControlModel.swift in Sources */,
 				284E22172A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeAPIDemo3/ScreenTimeAPIDemo3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTimeAPIDemo3/Preview Content\"";
@@ -293,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeAPIDemo3/ScreenTimeAPIDemo3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTimeAPIDemo3/Preview Content\"";
