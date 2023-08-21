@@ -13,6 +13,7 @@ import ManagedSettings
 class FamilyControlModel: ObservableObject {
     static let shared = FamilyControlModel()
     private let store = ManagedSettingsStore()
+    private let center = DeviceActivityCenter()
 
     private init() {}
 
@@ -23,19 +24,20 @@ class FamilyControlModel: ObservableObject {
             let applications = newValue.applicationTokens
             let categories = newValue.categoryTokens
             
+            print ("applications \(applications)")
+            print ("categories \(categories)")
+            
             store.shield.applications = applications.isEmpty ? nil : applications
             
             store.shield.applicationCategories = ShieldSettings
                 .ActivityCategoryPolicy
                 .specific(
-                    categories,
-                    except: Set()
+                    categories
                 )
             store.shield.webDomainCategories = ShieldSettings
                 .ActivityCategoryPolicy
                 .specific(
-                    categories,
-                    except: Set()
+                    categories
                 )
         }
     }
@@ -49,7 +51,6 @@ class FamilyControlModel: ObservableObject {
     }
 
     func initiateMonitoring() {
-        let center = DeviceActivityCenter()
         let schedule = DeviceActivitySchedule(
             intervalStart: DateComponents(hour: 0, minute: 0),
             intervalEnd: DateComponents(hour: 23, minute: 59),
@@ -73,6 +74,11 @@ class FamilyControlModel: ObservableObject {
         store.gameCenter.denyMultiplayerGaming = true
         store.media.denyMusicService = false
     }
+    
+    func stopMonitoring() {
+        center.stopMonitoring()
+    }
+
 }
 
 extension DeviceActivityName {

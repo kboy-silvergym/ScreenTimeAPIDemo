@@ -11,20 +11,40 @@ import FamilyControls
 struct ContentView: View {
     @StateObject var model = FamilyControlModel.shared
     @State var isPresented = false
+    @State var isPresented2 = false
+
     
     var body: some View {
-        Button("Select Apps to Discourage") {
-            isPresented = true
-        }
-        .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
         Button("Authorize")  {
             Task {
                 await model.authorize()
             }
         }
-        Button("Start Monitoring") {
-            model.initiateMonitoring()
+        .padding()
+        
+        Button("Select Apps to Discourage") {
+            isPresented = true
         }
+        .familyActivityPicker(
+            isPresented: $isPresented,
+            selection: $model.selectionToDiscourage
+        )
+        .padding()
+        
+//        Button("Start Monitoring") {
+//            model.initiateMonitoring()
+//        }
+//        .padding()
+        
+//        Button("Stop Monitoring") {
+//            model.stopMonitoring()
+//            isPresented2 = true
+//        }
+//        .padding()
+//        .alert(isPresented: $isPresented2) {
+//            Alert(title: Text("タイトル"))
+//        }
+
     }
 }
 
