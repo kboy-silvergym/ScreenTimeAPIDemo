@@ -37,7 +37,7 @@ struct ContentView: View {
 //        .padding()
         
 //        Button("Stop Monitoring") {
-//            model.stopMonitoring()
+//            model.stopMonixtoring()
 //            isPresented2 = true
 //        }
 //        .padding()
