@@ -42,12 +42,8 @@ class FamilyControlModel: ObservableObject {
         }
     }
     
-    func authorize() async {
-        do {
-            try await AuthorizationCenter.shared.requestAuthorization(for: .individual)
-        } catch {
-            
-        }
+    func authorize() async throws {
+        try await AuthorizationCenter.shared.requestAuthorization(for: .individual)
     }
 
     func initiateMonitoring() {
@@ -77,6 +73,20 @@ class FamilyControlModel: ObservableObject {
     
     func stopMonitoring() {
         center.stopMonitoring()
+    }
+    
+    func encourageAll(){
+        store.shield.applications = []
+        store.shield.applicationCategories = ShieldSettings
+            .ActivityCategoryPolicy
+            .specific(
+                []
+            )
+        store.shield.webDomainCategories = ShieldSettings
+            .ActivityCategoryPolicy
+            .specific(
+                []
+            )
     }
 
 }

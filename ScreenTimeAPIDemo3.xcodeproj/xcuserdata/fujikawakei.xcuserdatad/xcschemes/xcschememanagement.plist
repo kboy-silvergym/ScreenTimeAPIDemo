@@ -7,17 +7,35 @@
 		<key>ScreenTimeAPIDemo3.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>ShieldAction.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>ShieldConfig.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>284E22122A85DD6500005C08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28F813A42A9352C4007F50BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28F813B82A9353A8007F50BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
